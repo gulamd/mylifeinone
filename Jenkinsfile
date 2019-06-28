@@ -21,3 +21,4 @@ sh 'scp -o StrictHostKeyChecking=no target/*.war ubuntu@18.191.164.51:/home/ubun
 
 	}
 }
+}
