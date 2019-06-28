@@ -4,18 +4,18 @@ pipeline {
 	stages {
 	    stage('Checkout') {
 	        steps {
-				checkout scm
+				git 'https://github.com/gulamd/jenkins_build.git'	
 			}
 		}
 		stage('Build') {
 	        steps {
-				sh '/home/katty/Distros/apache-maven-3.6.0/bin/mvn install'
+				sh '/home/ubuntu/Distros/apache-maven-3.6.0/bin/mvn install'
 	        }
 		}
 		stage('Deployment') {
 			steps {
-				sh 'sshpass -p "gamut" scp target/gamutkart.war gamut@172.17.0.8:/home/gamut/Distros/apache-tomcat-8.5.38/webapps'
-				sh 'sshpass -p "gamut" ssh gamut@172.17.0.8 "JAVA_HOME=/home/gamut/Distros/jdk1.8.0_151" "/home/gamut/Distros/apache-tomcat-8.5.38/bin/startup.sh"'
+				sshagent(['tomcat-deployment']) {
+sh 'scp -o StrictHostKeyChecking=no target/*.war ubuntu@18.191.164.51:/home/ubuntu/Distros/apache-tomcat-8.5.38/webapps'
 			}
 		}
 
