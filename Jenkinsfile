@@ -20,7 +20,7 @@ pipeline {
 		}
 		stage('Publishing') {
 			steps {
-				nexusPublisher nexusInstanceId: '1234', nexusRepositoryId: 'Snapshot', packages: [[$class: 'MavenPackage', mavenAssetList: [], mavenCoordinate: [artifactId: 'gamutkart', groupId: 'com.gamutgurus', packaging: 'war', version: '1.1-SNAPSHOT']]]
+				nexusPublisher nexusInstanceId: '1234', nexusRepositoryId: 'Snapshot', packages: [[$class: 'MavenPackage', mavenAssetList: [], mavenCoordinate: [artifactId: 'gamutkart', groupId: 'com.gamutgurus', packaging: 'war', version: '1-SNAPSHOT']]]
 			}
 			
 		}
