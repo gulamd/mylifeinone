@@ -30,16 +30,16 @@
    <distributionManagement>
 
       <repository>
-        <id>releases</id>
-        <name>release</name>
-        <url>http://localhost:8081/repository/release/</url>
+        <id>Release</id>
+        <name>Release</name>
+        <url>http://40.113.197.159:8081/repository/Release/</url>
 
       </repository>
   
       <snapshotRepository>
-        <id>snapshots</id>
-        <name>snapshot</name>
-        <url>http://localhost:8081/repository/snapshot/</url>
+        <id>Snapshot</id>
+        <name>Snapshot</name>
+        <url>http://40.113.197.159:8081/repository/Snapshot/</url>
 
       </snapshotRepository>
 
