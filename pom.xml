@@ -32,14 +32,14 @@
       <repository>
         <id>Release</id>
         <name>Release</name>
-        <url>http://40.113.197.159:8081/repository/Release/</url>
+        <url>http://23.101.120.154:8081/repository/Release/</url>
 
       </repository>
   
       <snapshotRepository>
         <id>Snapshot</id>
         <name>Snapshot</name>
-        <url>http://40.113.197.159:8081/repository/Snapshot/</url>
+        <url>http://23.101.120.154:8081/repository/Snapshot/</url>
 
       </snapshotRepository>
 
